@@ -38,7 +38,16 @@
         </activity>
         <activity
             android:name=".TodoActivity"
-            android:label="@string/title_activity_todo" />
+            android:label="@string/title_activity_todo" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".tmp_stop_list"
             android:label="@string/title_activity_tmp_stop_list">

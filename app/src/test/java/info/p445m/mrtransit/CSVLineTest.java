@@ -24,7 +24,20 @@ public class CSVLineTest {
 
     @Test
     public void getNextField() throws Exception {
-        Log.e("testing", "testing testing testing log");
+
+        String fn = "C:\\\\Users\\\\pmg\\\\AndroidStudioProjects\\\\MrTransit\\\\app\\\\src\\\\main\\\\assets\\\\Unitrans\\\\stops.txt";
+        TokenReader tread = new TokenReader(fn);
+        Token k;
+
+        do {
+
+             k = tread.getToken();
+
+            System.out.format("%s %s\n", k.type, k.value);
+        } while (k.type != Token.Ttype.EOF);
+
+
+
 
     }
 
